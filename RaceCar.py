@@ -11,7 +11,9 @@ class RaceCar:
         self.losses = losses
 
     def description(self):
-        return "The make is " + self.make + ", the top speed is " + str(self.top_speed) + ""
+        line = "The make is " + self.make + ", the top speed is " + str(self.top_speed) + \
+               ", and the driver is " + self.driver.description() + ", with " + str(self.wins) + " wins."
+        return line
 
     def win_race(self):
         self.wins += 1
